@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - التراث اليمني</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/toastr.min.css">
+    <link rel="stylesheet" href="../css/new-colors.css">
+    <link rel="stylesheet" href="../css/login-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page-title="login.title">
+    <!-- Back to Home Button -->
+    <div>
+        <a href="index.html" class="back-to-home">
+            <i ></i> العودة للرئيسية
+        </a>
+    </div>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-grid">
+                <!-- Login Form Section -->
+                <div class="login-form-section">
+                    <div class="login-header">
+                        <h1 class="login-title" data-translate="login.title">تسجيل الدخول</h1>
+                        <p class="login-subtitle" data-translate="login.subtitle">مرحباً بك في موقع التراث اليمني</p>
+                    </div>
+                    
+                    <!-- Language Switcher -->
+                    <div class="language-switcher-login">
+                        <button class="lang-switch-login active" data-lang="ar">عربي</button>
+                        <button class="lang-switch-login" data-lang="en">English</button>
+                    </div>
+                    
+                    <form id="loginForm" novalidate>
+                        <div class="form-group">
+                            <label class="form-label" data-translate="login.email">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" id="email" name="email" required 
+                                   data-translate="login.email" placeholder="البريد الإلكتروني">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" data-translate="login.password">كلمة المرور</label>
+                            <input type="password" class="form-control" id="password" name="password" required 
+                                   data-translate="login.password" placeholder="كلمة المرور">
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                            <label class="form-check-label" for="remember" data-translate="login.remember">تذكرني</label>
+                        </div>
+                        
+                        <div class="forgot-password">
+                            <a href="#" data-translate="login.forgot">نسيت كلمة المرور؟</a>
+                        </div>
+                        
+                        <button type="submit" class="login-btn" data-translate="login.submit">تسجيل الدخول</button>
+                        
+                        <div class="register-link">
+                            <span data-translate="login.no-account">ليس لديك حساب؟</span>
+                            <a href="contact.html" data-translate="login.register">إنشاء حساب جديد</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Login Image Section -->
+                <div class="login-image-section">
+                    <div class="login-image-content">
+                        <h2>التراث اليمني</h2>
+                        <p>اكتشف عظمة التاريخ والثقافة اليمنية</p>
+                        <div class="login-image-icon-container">
+                            <i class="fas fa-mosque login-image-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/toastr.min.js"></script>
+    <script src="../js/language.js"></script>
+    
+    <script src="../js/login-page.js"></script>
+</body>
+</html>
+

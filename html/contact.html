@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="contact_title">تواصل معنا - التراث اليمني</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/new-colors.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/toastr.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><h1 data-lang-key="site_title">🏛️ التراث اليمني</h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-lang-key="home">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html" data-lang-key="login">تسجيل الدخول</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html" data-lang-key="contact">تواصل معنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary ms-2" id="language-toggle" data-lang-key="toggle_language">English</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <h1 class="section-title text-center mb-4" data-lang-key="contact_us">تواصل معنا</h1>
+            <p class="section-subtitle text-center mb-5" data-lang-key="contact_subtitle">نحن هنا للإجابة على استفساراتكم ومساعدتكم</p>
+            
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-md-7 mb-4">
+                    <div class="card p-4 shadow-sm">
+                        <h2 class="card-title mb-4" data-lang-key="send_message">أرسل لنا رسالة</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label" data-lang-key="full_name">الاسم الكامل</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label" data-lang-key="email_address">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label" data-lang-key="phone_number">رقم الهاتف</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label" data-lang-key="subject">الموضوع</label>
+                                <select id="subject" name="subject" class="form-select" required>
+                                    <option value="" data-lang-key="select_subject">اختر الموضوع</option>
+                                    <option value="general" data-lang-key="general_inquiry">استفسار عام</option>
+                                    <option value="heritage" data-lang-key="heritage_info">معلومات عن التراث</option>
+                                    <option value="collaboration" data-lang-key="collaboration">تعاون</option>
+                                    <option value="technical" data-lang-key="technical_issue">مشكلة تقنية</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label" data-lang-key="message">الرسالة</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" data-lang-key="send_message_btn">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-md-5">
+                    <div class="card p-4 shadow-sm">
+                        <h2 class="card-title mb-4" data-lang-key="contact_info">معلومات التواصل</h2>
+                        
+                        <div  class="contact-item d-flex align-items-start mb-3">
+                            <div  >
+                                <img src="../icon/loc.png" width="50px" alt="">
+                                
+                            </div>
+                            <div >
+                                <h3 class="h5 mb-1" data-lang-key="address">العنوان</h3>
+                                <p class="mb-0" data-lang-key="address_details">صنعاء، اليمن<br>شارع الزبيري، المدينة القديمة</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item d-flex align-items-start mb-3">
+                            <div >
+                                <img src="../icon/call.png" width="100px" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="h5 mb-1" data-lang-key="phone">الهاتف</h3>
+                                <p class="mb-0" data-lang-key="phone_details">+967 123 456 789<br>+967 987 654 321</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item d-flex align-items-start mb-3">
+                            <div class=>
+                                <img src="../icon/email.jpg" width="50px" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="h5 mb-1" data-lang-key="email">البريد الإلكتروني</h3>
+                                <p class="mb-0" data-lang-key="email_details">info@yemeni-heritage.com<br>contact@yemeni-heritage.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item d-flex align-items-start mb-3">
+                            <div class="">
+                                <img src="../icon/clock.jpg" width="100px" alt="">
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="h5 mb-1" data-lang-key="working_hours">ساعات العمل</h3>
+                                <p class="mb-0" data-lang-key="working_hours_details">السبت - الخميس: 8:00 ص - 4:00 م<br>الجمعة: مغلق</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="social-media mt-4">
+                            <h3 class="h5 mb-3" data-lang-key="follow_us">تابعنا على</h3>
+                            <div class="social-icons d-flex justify-content-start">
+                                <a href="#" class="social-icon facebook me-2">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon twitter me-2">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon instagram me-2">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon youtube me-2">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-icon linkedin me-2">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h3 data-lang-key="site_title_footer">التراث اليمني</h3>
+                    <p data-lang-key="footer_description">موقع متخصص في عرض وحفظ التراث اليمني العريق بجميع أشكاله وألوانه.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4 data-lang-key="quick_links">روابط سريعة</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" data-lang-key="home">الرئيسية</a></li>
+                        <li><a href="login.html" data-lang-key="login">تسجيل الدخول</a></li>
+                        <li><a href="contact.html" data-lang-key="contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4 data-lang-key="contact_us_footer">تواصل معنا</h4>
+                    <p data-lang-key="footer_email">📧 info@yemeni-heritage.com</p>
+                    <p data-lang-key="footer_phone">📱 +967 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-3">
+                <p data-lang-key="copyright">&copy; 2025 التراث اليمني. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+        <table border="1" cellpadding="10" style="width:100%; text-align:center;">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Image</th>
+                    <th>Country</th>
+                    <th>Preparation Steps</th>
+                    <th>Activities</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="https://via.placeholder.com/150" alt="Iran Image"></td>
+                    <td><a href="https://www.britannica.com/place/Iran" target="_blank">Iran</a></td>
+                    <td rowspan="3">
+                        <ol>
+                            <li>Select countries to visit</li>
+                            <li>Book flights and hotels</li>
+                            <li>Plan trip schedule</li>
+                            <li>Prepare documents and visas</li>
+                            <li>Pack luggage</li>
+                        </ol>
+                    </td>
+    
+                    <td rowspan="3">
+                        <ul>
+                            <li>Taste local foods</li>
+                            <li>Visit historical landmarks</li>
+                            <li>Take photos of nature and flowers</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="/" alt="Lebanon Image"></td>
+                    <td><a href="https://www.britannica.com/place/Lebanon" target="_blank">Lebanon</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+    
+                    <td><img src="https://via.placeholder.com/150" alt="Palestine Image"></td>
+                    <td><a href="https://www.britannica.com/place/Palestine" target="_blank">Palestine</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/toastr.min.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/contact-page.js"></script>
+</body>
+</html>
+
+
