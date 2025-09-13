@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title">التراث اليمني - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/toastr.min.css">
+    <link rel="stylesheet" href="../css/new-colors.css">
+    <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/modal.css">
+</head>
+<body data-page-title="nav.home" >
+    
+    <div class="language-switcher">
+        <button class="lang-switch active" data-lang="ar">عربي</button>
+        <button class="lang-switch" data-lang="en">English</button>
+    </div>
+
+    
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h1 class="mb-0">🏛️ التراث اليمني</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" style="margin-left: 20%;">
+                            <a class="nav-link active" href="index.html" data-translate="nav.home">الرئيسية</a>
+                        </li>
+
+                        <li class="nav-item" style="margin-left: 20%;" >
+                            <a class="nav-link" href="login.html" data-translate="nav.login">تسجيل الدخول</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 20%;">
+                            <a class="nav-link" href="contact.html" data-translate="nav.contact">تواصل معنا</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav.heritage-types">
+                                أنواع التراث
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:rgb(212, 220, 236);">
+                                <li><a class="dropdown-item" href="architectural.html" data-translate="heritage.architectural">التراث المعماري</a></li>
+                                <li><a class="dropdown-item" href="cultural-artistic.html" data-translate="heritage.cultural">التراث الثقافي والفني</a></li>
+                                <li><a class="dropdown-item" href="traditional-clothing.html" data-translate="heritage.clothing">الأزياء التقليدية</a></li>
+                                <li><a class="dropdown-item" href="food.html" data-translate="heritage.food">التراث الغذائي</a></li>
+                                <li><a class="dropdown-item" href="music.html" data-translate="heritage.music">التراث الموسيقي</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-translate="hero.title">اكتشف عظمة التراث اليمني</h1>
+            <p class="hero-subtitle" data-translate="hero.subtitle">رحلة عبر التاريخ والثقافة والحضارة اليمنية العريقة</p>
+            <div class="hero-buttons">
+                <a href="#heritage-types" class="btn btn-primary" data-translate="hero.explore">استكشف التراث</a>
+                <a href="login.html" class="btn btn-secondary" data-translate="hero.join">انضم إلينا</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span data-translate="hero.discover">اكتشف المزيد</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="container" ">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="../images/bab_log.png" alt="Heritage Image 1">
+            </div>
+            <div class="slide">
+                <img src="../images/dar.jpg" alt="Heritage Image 2">
+            </div>
+            <div class="slide">
+                <img src="../images/jam.jpg" alt="Heritage Image 3">
+            </div>
+            <div class="slide">
+                <img src="../images/bra.jpg" alt="Heritage Image 4">
+            </div>
+            <button class="slider-arrow slider-prev" onclick="previousSlide()">‹</button>
+            <button class="slider-arrow slider-next" onclick="nextSlide()">›</button>
+            <div class="slider-dots">
+                <button class="slider-dot active" onclick="currentSlide(1)"></button>
+                <button class="slider-dot" onclick="currentSlide(2)"></button>
+                <button class="slider-dot" onclick="currentSlide(3)"></button>
+                <button class="slider-dot" onclick="currentSlide(4)"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Types Grid -->
+    <section id="heritage-types" class="heritage-grid py-5" style="background-color: rgb(38, 104, 143);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-translate="heritage.title">أنواع التراث اليمني</h2>
+                <p class="section-subtitle" data-translate="heritage.subtitle">اكتشف ثراء وتنوع التراث اليمني عبر العصور</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="heritage-card h-100">
+                        <div class="card-image">
+                            <img src="../images/dar.jpg" alt="التراث المعماري" class="img-fluid">
+                            <div class="card-overlay">
+                                <h3 data-translate="heritage.architectural">التراث المعماري</h3>
+                                <p data-translate="heritage.architectural.desc">اكتشف روائع العمارة اليمنية التقليدية</p>
+                                <a href="architectural.html" class="btn btn-primary card-btn" data-translate="heritage.explore">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="heritage-card h-100">
+                        <div class="card-image">
+                            <img src="../images/6d6XjFJfTwH6.jpeg" alt="التراث الثقافي والفني" class="img-fluid">
+                            <div class="card-overlay">
+                                <h3 data-translate="heritage.cultural">التراث الثقافي والفني</h3>
+                                <p data-translate="heritage.cultural.desc">الرقصات والفنون الشعبية اليمنية</p>
+                                <a href="cultural-artistic.html" class="btn btn-primary card-btn" data-translate="heritage.explore">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="heritage-card h-100">
+                        <div class="card-image">
+                            <img src="../images/cloth.jpg" alt="الأزياء التقليدية" class="img-fluid">
+                            <div class="card-overlay">
+                                <h3 data-translate="heritage.clothing">الأزياء التقليدية</h3>
+                                <p data-translate="heritage.clothing.desc">الملابس والحلي التراثية اليمنية</p>
+                                <a href="traditional-clothing.html" class="btn btn-primary card-btn" data-translate="heritage.explore">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="heritage-card h-100">
+                        <div class="card-image">
+                            <img src="../images/hum.jpg" alt="التراث الغذائي" class="img-fluid">
+                            <div class="card-overlay">
+                                <h3 data-translate="heritage.food">التراث الغذائي</h3>
+                                <p data-translate="heritage.food.desc">الأطباق والمشروبات التقليدية</p>
+                                <a href="food.html" class="btn btn-primary card-btn" data-translate="heritage.explore">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="heritage-card h-100">
+                        <div class="card-image">
+                            <img src="../images/1Ar2IyGm772y.webp" alt="التراث الموسيقي" class="img-fluid">
+                            <div class="card-overlay">
+                                <h3 data-translate="heritage.music">التراث الموسيقي</h3>
+                                <p data-translate="heritage.music.desc">الألحان والآلات الموسيقية التراثية</p>
+                                <a href="music.html" class="btn btn-primary card-btn" data-translate="heritage.explore">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#all-heritage" class="btn btn-outline-primary btn-lg" data-translate="heritage.view-all">عرض جميع أنواع التراث</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section py-5" style="background-color: rgb(80, 97, 91); ">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label" data-translate="stats.types">نوع من التراث</div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label" data-translate="stats.images">صورة تراثية</div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label" data-translate="stats.years">سنة من التاريخ</div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label" data-translate="stats.creativity">من الإبداع</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Modal -->
+    <div id="heritageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">تفاصيل التراث</h5>
+                <button type="button" class="modal-close" onclick="closeModal('heritageModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Content will be loaded via Ajax -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeModal('heritageModal')">إغلاق</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>التراث اليمني</h3>
+                    <p data-translate="footer.description">موقع متخصص في عرض وحفظ التراث اليمني العريق بجميع أشكاله وألوانه.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.quick-links">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav.home">الرئيسية</a></li>
+                        <li><a href="login.html" data-translate="nav.login">تسجيل الدخول</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">تواصل معنا</a></li>
+                        <li><a href="#" onclick="showModal('infoModal')">معلومات إضافية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.contact-us">تواصل معنا</h4>
+                    <p>📧 info@yemeni-heritage.com</p>
+                    <p>📱 +967 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 التراث اليمني. <span data-translate="footer.rights">جميع الحقوق محفوظة.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/toastr.min.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/index-page.js"></script>
+</body>
+</html>
+
