@@ -1,0 +1,763 @@
+/* Heritage Page Styles */
+.page-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    background: linear-gradient(45deg, #FFD700, #FFA500, #FF6347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Heritage Navigation */
+.heritage-nav {
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    padding: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tab-btn {
+    background: linear-gradient(135deg, #E74C3C, #C0392B);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-btn:nth-child(2) {
+    background: linear-gradient(135deg, #3498DB, #2980B9);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.tab-btn:nth-child(3) {
+    background: linear-gradient(135deg, #27AE60, #229954);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.tab-btn:nth-child(4) {
+    background: linear-gradient(135deg, #9B59B6, #8E44AD);
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
+}
+
+.tab-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #F39C12, #E67E22);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+    transform: translateY(-2px);
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.tab-btn:hover::before {
+    left: 100%;
+}
+
+/* Content Sections */
+.heritage-content {
+    background: linear-gradient(135deg, #FFF8DC, #F5F5DC);
+    min-height: 100vh;
+    padding: 4rem 0;
+}
+
+.content-section {
+    display: none;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 20px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #8B4513, #A0522D, #CD853F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #5D4E37;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.content-card {
+    background: linear-gradient(135deg, #FFFFFF, #F8F8FF);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #DAA520;
+}
+
+.card-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.content-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #8B4513;
+}
+
+.card-content p {
+    color: #5D4E37;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    background: linear-gradient(135deg, #F0E68C, #DDD700);
+    color: #8B4513;
+    padding: 8px 15px;
+    margin: 8px 0;
+    border-radius: 20px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.features-list li::before {
+    content: '✨';
+    margin-left: 8px;
+}
+
+/* Showcase Sections */
+.dishes-showcase, .womens-clothing-showcase, .drinks-showcase, .genres-showcase, .instruments-showcase {
+    background: linear-gradient(135deg, #FFF8DC, #FFFACD);
+    padding: 3rem;
+    border-radius: 20px;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.dishes-showcase h3, .womens-clothing-showcase h3, .drinks-showcase h3, .genres-showcase h3, .instruments-showcase h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #8B4513;
+}
+
+.dishes-grid, .instruments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.dish-item, .instrument-item {
+    background: linear-gradient(135deg, #FFFFFF, #F0F8FF);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dish-item:hover, .instrument-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.dish-icon, .instrument-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.dish-item h4, .instrument-item h4 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+/* Clothing Categories */
+.clothing-category, .drink-category, .song-category, .genre-card {
+    background: linear-gradient(135deg, #FFFFFF, #F5F5F5);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-left: 5px solid #DAA520;
+}
+
+.category-header, .genre-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.category-icon, .genre-icon {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+.category-header h3, .genre-header h3 {
+    color: #8B4513;
+    font-size: 1.8rem;
+}
+
+.clothing-features, .drink-types, .song-examples, .genre-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.clothing-features span, .genre-features span {
+    background: linear-gradient(135deg, #E6E6FA, #D8BFD8);
+    color: #4B0082;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Drink Types */
+.drink-type, .song-item {
+    background: linear-gradient(135deg, #F0F8FF, #E6F3FF);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    border-left: 3px solid #3498DB;
+}
+
+.drink-type h4, .song-item h4 {
+    color: #2980B9;
+    margin-bottom: 0.5rem;
+}
+
+.drink-type p, .song-item p {
+    color: #5D4E37;
+    font-size: 0.9rem;
+}
+
+/* Jewelry Grid */
+.jewelry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.jewelry-item {
+    background: linear-gradient(135deg, #FFFFFF, #F8F8FF);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.jewelry-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.jewelry-image {
+    margin-bottom: 1.5rem;
+}
+
+.jewelry-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.jewelry-item h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+
+.jewelry-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.jewelry-item li {
+    background: linear-gradient(135deg, #FFE4E1, #FFC0CB);
+    color: #8B0000;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Regional Map */
+.regional-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.region-card {
+    background: linear-gradient(135deg, #FFFFFF, #F0F8FF);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.region-header {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.region-content {
+    padding: 2rem;
+}
+
+.region-features {
+    margin-top: 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+/* Sweets Grid */
+.sweets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.sweet-card {
+    background: linear-gradient(135deg, #FFFFFF, #FFF8DC);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.sweet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.sweet-image {
+    background: linear-gradient(135deg, #FFE4B5, #DEB887);
+    padding: 2rem;
+    text-align: center;
+}
+
+.sweet-icon {
+    font-size: 4rem;
+}
+
+.sweet-content {
+    padding: 2rem;
+}
+
+.sweet-content h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+
+.sweet-ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.sweet-ingredients span {
+    background: linear-gradient(135deg, #F0E68C, #DDD700);
+    color: #8B4513;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Spices Showcase */
+.spices-showcase {
+    margin: 3rem 0;
+}
+
+.spice-category {
+    background: linear-gradient(135deg, #FFFFFF, #F5F5F5);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.spice-category h3 {
+    color: #8B4513;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.spice-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.spice-item {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #FFF8DC, #F5F5DC);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.spice-icon {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.spice-info h4 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.spice-info p {
+    color: #5D4E37;
+    font-size: 0.9rem;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    margin: 3rem 0;
+}
+
+.ingredients-section h3 {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 2rem;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.ingredient-card {
+    background: linear-gradient(135deg, #FFFFFF, #F0F8FF);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.ingredient-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.ingredient-card h4 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+/* Artists Timeline */
+.artists-timeline {
+    margin: 3rem 0;
+}
+
+.artist-era {
+    margin: 3rem 0;
+}
+
+.artist-era h3 {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.artist-card {
+    background: linear-gradient(135deg, #FFFFFF, #F8F8FF);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.artist-info h4 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.artist-achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.artist-achievements span {
+    background: linear-gradient(135deg, #E6E6FA, #D8BFD8);
+    color: #4B0082;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Musical Heritage */
+.musical-heritage {
+    background: linear-gradient(135deg, #FFF8DC, #FFFACD);
+    padding: 3rem;
+    border-radius: 20px;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.musical-heritage h3 {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 2rem;
+}
+
+.heritage-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.heritage-item {
+    background: linear-gradient(135deg, #FFFFFF, #F0F8FF);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.heritage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.heritage-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.heritage-item h4 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+
+/* Gallery */
+.gallery-section, .image-gallery {
+    margin: 3rem 0;
+}
+
+.gallery-section h3 {
+    text-align: center;
+    color: #8B4513;
+    margin-bottom: 2rem;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .dishes-grid, .instruments-grid, .jewelry-grid, .regional-map, .sweets-grid, .artists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .spice-items, .ingredients-grid, .heritage-items {
+        grid-template-columns: 1fr;
+    }
+}
+
